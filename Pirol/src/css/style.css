@@ -3,6 +3,11 @@ body {
     color: #787878;
     font-weight: medium;
     margin: 0;
+
+}
+
+.main {
+    overflow: hidden;
 }
 
 h1,
@@ -22,6 +27,11 @@ i {
 
 .logos {
     padding: 65px 0;
+}
+
+.logos__item {
+    display: flex;
+    justify-content: center;
 }
 
 /* SECTION */
@@ -46,14 +56,18 @@ i {
     padding: 35px 0;
     background: #e9e9e9;
     z-index: 100;
-    box-shadow: 0 2px 10px 1px #000;
-}
+    
 
-.header_fixed {
     position: fixed;
     left: 0;
     top: 0;
+    
+    transition: all .2s linear;
+}
 
+.header_fixed {
+    transition: all .2s linear;
+    box-shadow: 0 2px 10px 1px #000;
 }
 
 /* NAV */
@@ -63,7 +77,7 @@ i {
     color: #191919;
     text-decoration: none;
     text-transform: uppercase;
-    margin: 0 15px;
+    margin-right: 15px;
     transition: .3s;
 }
 
@@ -78,6 +92,7 @@ i {
 .intro {
     padding: 200px 0;
     background: #e9e9e9;
+    min-height: 100vh;
 }
 
 .intro__title {
@@ -154,26 +169,27 @@ i {
     display: block;
     background: #10c9c3;
     width: 0%;
-
+    
     transition: width .3s ease;
 
 }
 
 .bar-fill-design {
     width: 75%;
-    animation: progressbar75 2s infinite;
+/*    animation: progressbar75 2s;*/
 }
 
 .bar-fill-web {
     width: 90%;
-    animation: progressbar90 2s infinite;
+/*    animation: progressbar90 2s;*/
 }
 
 .bar-fill-marketing {
     width: 65%;
-    animation: progressbar65 2s infinite;
+/*    animation: progressbar65 2s;*/
 }
 
+/*
 @-webkit-keyframes progressbar75 {
     from {
         width: 0
@@ -203,6 +219,7 @@ i {
         width: 65%
     }
 }
+*/
 
 /* STATISTIC */
 
@@ -214,6 +231,7 @@ i {
 
 .statistic__object {
     display: flex;
+
 }
 
 
@@ -232,15 +250,16 @@ i {
 /* GALLERY */
 
 .gallery {
-    /*    overflow: hidden;*/
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     background: #000;
 }
 
 .gallery__item {
+    padding: 0;
     overflow: hidden;
-    width: 25%;
+    /*    width: 25%;*/
     position: relative;
 
     cursor: pointer;
@@ -414,3 +433,103 @@ textarea {
     font-size: 18px;
     margin-bottom: 30px;
 }
+
+@media (max-width:1200px) {
+    .nav a {
+        margin: 0 12px;
+        font-size: 10px;
+        display: none;
+    }
+
+    .skills {
+        background: #f8f9f9;
+    }
+
+    .intro {
+        text-align: center;
+    }
+
+    .section__text {
+        padding: 0;
+    }
+
+    .intro__btn {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .section__title {
+        text-align: center;
+    }
+}
+
+@media (max-width:768px) {
+
+    .statistic__object {
+        margin-bottom: 50px;
+    }
+
+    .statistic__object:nth-child(3) {
+        margin-bottom: 0;
+    }
+
+    .statistic__object:last-child {
+        margin-bottom: 0;
+    }
+
+
+    /*
+    .features__text {
+        font-size: 10px;
+    }
+*/
+
+    .section__text {
+        padding: 0 10px;
+    }
+
+    .logos__item {
+        margin-bottom: 50px;
+    }
+
+    .logos__item:nth-child(4) {
+        margin-bottom: 0;
+    }
+
+    .logos__item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width:576px) {
+    .row {
+        margin: 0;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .container-fluid {
+        padding: 0;
+    }
+
+
+    .bar-unfill {
+        /*        width: 80%;*/
+    }
+
+    .header {
+        max-width: 576px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/* PARCEL */

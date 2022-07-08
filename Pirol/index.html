@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piroll</title>
     <link rel="stylesheet" href="./src/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="./src/css/style.css">
@@ -14,22 +15,22 @@
 
 <body>
     <!-- HEADER -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
-               <div class="row">
-                <div class="col">
+            <div class="row">
+                <div class="col-1">
                     <img src="./src/img/logo.png" alt="">
                 </div>
                 <div class="col-4"></div>
                 <div class="col-7">
                     <nav class="nav">
-                        <a href="#">Home</a>
-                        <a href="#">About</a>
-                        <a href="#">Work</a>
-                        <a href="#">Process</a>
-                        <a href="#">Services</a>
-                        <a href="#">Testimonials</a>
-                        <a href="#">Contact</a>
+                        <a href="#" data-scroll="#intro">Home</a>
+                        <a href="#" data-scroll="#about">About</a>
+                        <a href="#" data-scroll="#work">Work</a>
+                        <a href="#" data-scroll="#process">Process</a>
+                        <a href="#" data-scroll="#services">Services</a>
+                        <a href="#" data-scroll="#testimonials">Testimonials</a>
+                        <a href="#" data-scroll="#contact">Contact</a>
                     </nav>
                 </div>
             </div>
@@ -37,11 +38,12 @@
     </header>
     <!-- MAIN -->
     <main class="main">
-        <section class="intro">
+        <!-- INTRO -->
+        <section class="intro" id="intro">
             <div class="container">
                 <div class="row">
-                    <div class="col-6"></div>
-                    <div class="col-6">
+                    <div class="col-lg-6"></div>
+                    <div class="col-lg-6">
                         <div class="intro__title">
                             <h1>We Design and Develop</h1>
                         </div>
@@ -51,18 +53,18 @@
                                 about designing websites and mobile apps.
                             </p>
                         </div>
-                        <div class="intro__btn">
+                        <div class="intro__btn" data-scroll="#contact">
                             CONTACT US
                         </div>
                     </div>
                 </div>
             </div>
-        </section> <!-- INTRO -->
-        <section class="about">
+        </section>
+        <!-- ABOUT -->
+        <section class="about" id="about">
             <div class="container">
                 <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col-6">
+                    <div class="col">
                         <div class="section__title">
                             <h2>About us</h2>
                         </div>
@@ -73,14 +75,14 @@
                         </div>
                         <div class="about__signature"><img src="./src/img/signature.png" alt=""></div>
                     </div>
-                    <div class="col-3"></div>
                 </div>
             </div>
-        </section> <!-- ABOUT -->
+        </section>
+        <!-- SKILLS -->
         <section class="skills">
             <div class="container">
                 <div class="row">
-                    <div class="col-5">
+                    <div class="col-lg-5">
                         <div class="section__title">
                             <h2>Professional Skills</h2>
                         </div>
@@ -107,89 +109,94 @@
                             <span class="object__procent">65%</span>
                             <div class="object__bar">
                                 <span class="bar-unfill">
-                                    <span class="bar-fill bar-fill-marketing"></span>
+                                    <span id="progressBar" class="bar-fill bar-fill-marketing"></span>
                                 </span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section> <!-- SKILLS -->
-        <section class="statistic">
+        </section>
+        <!-- STATISTIC -->
+        <section class="statistic" id="work">
             <div class="container">
                 <div class="row">
-                    <div class="col-3">
-                        <div class="statistic__object">
-                            <i class="fa-solid fa-briefcase"></i>
-                            <div class="statistic__textarea">
-                                <div class="statistic__counter">548</div>
-                                <div class="statistic__title">Projects Completed</div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-3">
-                        <div class="statistic__object">
-                            <i class="fa-regular fa-clock"></i>
-                            <div class="statistic__textarea">
-                                <div class="statistic__counter">1465</div>
-                                <div class="statistic__title">Working Hours</div>
-                            </div>
-
+                    <div class="statistic__object col-6 col-md-3">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <div class="statistic__textarea">
+                            <div class="statistic__counter">548</div>
+                            <div class="statistic__title">Projects Completed</div>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="statistic__object">
-                            <i class="fa-regular fa-star"></i>
-                            <div class="statistic__textarea">
-                                <div class="statistic__counter">612</div>
-                                <div class="statistic__title">Positive Feedbacks</div>
-                            </div>
+                    <div class="statistic__object col-6 col-md-3">
+                        <i class="fa-regular fa-clock"></i>
+                        <div class="statistic__textarea">
+                            <div class="statistic__counter">1465</div>
+                            <div class="statistic__title">Working Hours</div>
+                        </div>
+                    </div>
+                    <div class="statistic__object col-6 col-md-3">
+                        <i class="fa-regular fa-star"></i>
+                        <div class="statistic__textarea">
+                            <div class="statistic__counter">612</div>
+                            <div class="statistic__title">Positive Feedbacks</div>
+                        </div>
+                    </div>
+                    <div class="statistic__object col-6 col-md-3">
+
+                        <i class="fa-regular fa-heart"></i>
+                        <div class="statistic__textarea">
+                            <div class="statistic__counter">735</div>
+                            <div class="statistic__title">Happy Clients</div>
                         </div>
 
-                    </div>
-                    <div class="col-3">
-                        <div class="statistic__object">
-                            <i class="fa-regular fa-heart"></i>
-                            <div class="statistic__textarea">
-                                <div class="statistic__counter">735</div>
-                                <div class="statistic__title">Happy Clients</div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-        </section> <!-- STATISTIC -->
+        </section>
+        <!-- GALLERY -->
         <section class="gallery">
-            <div class="gallery__item">
-                <img src="./src/img/gallery/img1.jpg" alt="">
-                <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="gallery__item col-6 col-md-3">
+                        <img src="./src/img/gallery/img1.jpg" alt="">
+                        <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
+                    </div>
+                    <div class="gallery__item col-6 col-md-3">
+                        <img src="./src/img/gallery/img2.jpg" alt="">
+                        <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
+                    </div>
+                    <div class="gallery__item col-6 col-md-3">
+                        <img src="./src/img/gallery/img3.jpeg" alt="">
+                        <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
+                    </div>
+                    <div class="gallery__item col-6 col-md-3">
+                        <img src="./src/img/gallery/img4.jpg" alt="">
+                        <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
+                    </div>
+
+                    <div class="gallery__item col-6 col-md-3">
+                        <img src="./src/img/gallery/img5.jpg" alt="">
+                        <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
+                    </div>
+                    <div class="gallery__item col-6 col-md-3">
+                        <img src="./src/img/gallery/img6.jpg" alt="">
+                        <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
+                    </div>
+                    <div class="gallery__item col-6 col-md-3">
+                        <img src="./src/img/gallery/img7.jpg" alt="">
+                        <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
+                    </div>
+                    <div class="gallery__item col-6 col-md-3">
+                        <img src="./src/img/gallery/img8.jpg" alt="">
+                        <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
+                    </div>
+                </div>
             </div>
-            <div class="gallery__item"><img src="./src/img/gallery/img2.jpg" alt="">
-                <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
-            </div>
-            <div class="gallery__item"><img src="./src/img/gallery/img3.jpeg" alt="">
-                <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
-            </div>
-            <div class="gallery__item"><img src="./src/img/gallery/img4.jpg" alt="">
-                <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
-            </div>
-            <div class="gallery__item">
-                <img src="./src/img/gallery/img5.jpg" alt="">
-                <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
-            </div>
-            <div class="gallery__item"><img src="./src/img/gallery/img6.jpg" alt="">
-                <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
-            </div>
-            <div class="gallery__item"><img src="./src/img/gallery/img7.jpg" alt="">
-                <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
-            </div>
-            <div class="gallery__item"><img src="./src/img/gallery/img8.jpg" alt="">
-                <div class="gallery__eye"><i class="fa-regular fa-eye"></i></div>
-            </div>
-        </section> <!-- GALLERY -->
+        </section>
         <div class="download">Load more work</div>
-        <section class="ourwork">
+        <!-- OUR WORK -->
+        <section class="ourwork" id="process">
             <div class="container">
                 <div class="section__title">
                     <h2>Our Work Process</h2>
@@ -197,32 +204,35 @@
                 <div class="section__text">Was years it seasons was there form he in in them together over that,
                     third sixth gathered female creeping bearing behold years.</div>
                 <div class="player"></div>
+                <!--
                 <video width="980" height="720" controls="controls">
                 </video>
+-->
             </div>
-        </section> <!-- OUR WORK -->
-        <section class="features">
+        </section>
+        <!-- FEATURES -->
+        <section class="features" id="services">
             <div class="container">
                 <div class="row">
-                    <div class="col-3 features__object">
+                    <div class="col-6 col-md-3 features__object">
                         <i class="fa-regular fa-gem"></i>
                         <div class="features__title">ui / ux design</div>
                         <div class="features__text">Be set fourth land god darkness
                             make it wherein own</div>
                     </div>
-                    <div class="col-3 features__object">
+                    <div class="col-6 col-md-3 features__object">
                         <i class="fa-brands fa-connectdevelop"></i>
                         <div class="features__title">web development</div>
                         <div class="features__text">A she'd them bring void moving
                             third she'd kind fill</div>
                     </div>
-                    <div class="col-3 features__object">
+                    <div class="col-6 col-md-3 features__object">
                         <i class="fa-solid fa-mobile-screen"></i>
                         <div class="features__title">app / mobile</div>
                         <div class="features__text">Dominion man second spirit he,
                             earth they're creeping</div>
                     </div>
-                    <div class="col-3 features__object">
+                    <div class="col-6 col-md-3 features__object">
                         <i class="fa-solid fa-gamepad"></i>
                         <div class="features__title">game design</div>
                         <div class="features__text">Morning his saying moveth it
@@ -230,25 +240,25 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3 features__object">
+                    <div class="col-6 col-md-3 features__object">
                         <i class="fa-solid fa-plane-departure"></i>
                         <div class="features__title">SEO / marketing</div>
                         <div class="features__text">Whales likeness hath, man kind
                             for them air two won't</div>
                     </div>
-                    <div class="col-3 features__object">
+                    <div class="col-6 col-md-3 features__object">
                         <i class="fa-regular fa-star"></i>
                         <div class="features__title">photography</div>
                         <div class="features__text">Open, great whales air rule for,
                             fourth life whales</div>
                     </div>
-                    <div class="col-3 features__object">
+                    <div class="col-6 col-md-3 features__object">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
                         <div class="features__title">graphic design</div>
                         <div class="features__text">Creepeth one seas cattle grass
                             give moving saw give</div>
                     </div>
-                    <div class="col-3 features__object">
+                    <div class="col-6 col-md-3 features__object">
                         <i class="fa-solid fa-fill-drip"></i>
                         <div class="features__title">illustrations</div>
                         <div class="features__text">Give won't after land fill creeping
@@ -256,8 +266,9 @@
                     </div>
                 </div>
             </div>
-        </section> <!-- FEATURES -->
-        <section class="quotes">
+        </section>
+        <!-- SLIDER -->
+        <section class="quotes" id="testimonials">
             <div class="container">
                 <div class="slider single-item">
                     <div class="item__text">
@@ -276,19 +287,21 @@
                     </div>
                 </div>
             </div>
-        </section> <!-- SLIDER -->
+        </section>
+        <!-- LOGOS -->
         <div class="logos">
             <div class="container">
                 <div class="row">
-                    <div class="col"><img src="./src/img/logos/1.png" alt=""></div>
-                    <div class="col"><img src="./src/img/logos/2.png" alt=""></div>
-                    <div class="col"><img src="./src/img/logos/3.png" alt=""></div>
-                    <div class="col"><img src="./src/img/logos/4.png" alt=""></div>
-                    <div class="col"><img src="./src/img/logos/5.png" alt=""></div>
+                    <div class="logos__item col-4 col-md"><img src="./src/img/logos/1.png" alt=""></div>
+                    <div class="logos__item col-4 col-md"><img src="./src/img/logos/2.png" alt=""></div>
+                    <div class="logos__item col-4 col-md"><img src="./src/img/logos/3.png" alt=""></div>
+                    <div class="logos__item col-6 col-md"><img src="./src/img/logos/4.png" alt=""></div>
+                    <div class="logos__item col-6 col-md"><img src="./src/img/logos/5.png" alt=""></div>
                 </div>
             </div>
-        </div> <!-- LOGOS -->
-        <section class="contact">
+        </div>
+        <!-- CONTACT US -->
+        <section class="contact" id="contact">
             <div class="container">
                 <div class="section__title">
                     <h2>Need a Project?</h2>
@@ -312,7 +325,7 @@
                     <button class="intro__btn">send message</button>
                 </form>
             </div>
-        </section> <!-- CONTACT US -->
+        </section>
     </main>
     <!-- FOOTER -->
     <footer class="footer">
@@ -336,6 +349,8 @@
             </div>
         </div>
     </footer>
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="slick/slick.min.js"></script>
     <script src="main.js"></script>
